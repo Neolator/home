@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neolator — Your Arcade. Your Way.</title>
+  <meta name="description" content="Neolator is a modern Android arcade emulator with intuitive customizable controls, classic arcade support, and homebrew gaming.">
+  <meta name="theme-color" content="#050608">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neolator.app/">
+  <meta property="og:title" content="Neolator — Your Arcade. Your Way.">
+  <meta property="og:description" content="A modern arcade experience built for Android — with intuitive controls, deep customization, and support for classic and homebrew games.">
+  <meta property="og:image" content="/assets/brand/icon-512.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neolator — Your Arcade. Your Way.">
+  <meta name="twitter:description" content="A modern arcade experience built for Android — with intuitive controls, deep customization, and support for classic and homebrew games.">
+  <meta name="twitter:image" content="/assets/brand/icon-512.png">
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+
+  <!-- Ambient Glow & CRT Scanline Layers -->
+  <div class="ambient-glow-layer" aria-hidden="true"></div>
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="vignette-overlay" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       SECTION 01: NAVIGATION
+       ========================================================================= -->
+  <header class="site-nav" id="siteNav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Neolator Homepage">
+        <img src="/assets/brand/icon-192.png" alt="Neolator Logo Icon" class="nav-logo-img">
+        <span class="nav-brand-title">NEOLATOR</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#controls" class="nav-link">Controls</a></li>
+          <li><a href="#compatibility" class="nav-link">Compatibility</a></li>
+          <li><a href="#showcase" class="nav-link">Experience</a></li>
+          <li><a href="#gallery" class="nav-link">Screenshots</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Scanlines CRT Toggle Switch -->
+        <button type="button" class="crt-toggle-btn" id="crtToggleBtn" aria-label="Toggle CRT Scanline Effect" aria-pressed="true" title="Toggle CRT Scanlines">
+          <span class="crt-toggle-dot"></span>
+          <span>CRT FILTER</span>
+        </button>
+
+        <a href="#download" class="btn btn-primary btn-sm">GET NEOLATOR</a>
+
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#controls" class="nav-link">Controls</a>
+      <a href="#compatibility" class="nav-link">Compatibility</a>
+      <a href="#showcase" class="nav-link">Experience</a>
+      <a href="#gallery" class="nav-link">Screenshots</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#download" class="btn btn-primary" style="margin-top: 12px; width: 100%;">GET NEOLATOR</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         SECTION 02: HERO
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow reveal">
+            <span class="eyebrow-indicator"></span>
+            <span>ANDROID ARCADE EMULATOR</span>
+          </div>
+
+          <h1 class="hero-title reveal">
+            YOUR ARCADE.<br>
+            <span class="gradient-text">YOUR WAY.</span>
+          </h1>
+
+          <p class="hero-desc reveal">
+            A modern arcade experience built for Android — with intuitive controls, deep customization, and support for classic and homebrew games.
+          </p>
+
+          <div class="hero-cta-group reveal">
+            <a href="#download" class="btn btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186a1.492 1.492 0 0 1-.22-.767V2.581c0-.284.08-.546.22-.767zm11.242 11.243l2.096-2.097-9.33-5.387 7.234 7.484zm0 1.886l-7.234 7.484 9.33-5.387-2.096-2.097zm1.488-1.488l3.193 1.843c1.076.621 1.076 1.636 0 2.257l-3.193 1.843-1.636-1.636 1.636-2.307z"/>
+              </svg>
+              <span>GET IT ON GOOGLE PLAY</span>
+            </a>
+            <a href="#features" class="btn btn-secondary">
+              <span>EXPLORE NEOLATOR</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-meta reveal">
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">PLATFORM</span>
+              <span class="hero-meta-val">Android</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">CONTROLS</span>
+              <span class="hero-meta-val">Customizable Touch</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">CORE FOCUS</span>
+              <span class="hero-meta-val">Arcade &amp; Homebrew</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Mockup with Actual Gameplay Video -->
+        <div class="device-container reveal">
+          <div class="hero-device-glow" aria-hidden="true"></div>
+          
+          <div class="phone-mockup">
+            <div class="phone-notch">
+              <span class="notch-speaker"></span>
+              <span class="notch-camera"></span>
+            </div>
+
+            <div class="phone-screen">
+              <!-- Actual Real Gameplay Video (Ralf vs Rugal fight) -->
+              <video id="heroVideo" autoplay loop muted playsinline poster="/assets/screenshots/poster-02.jpg">
+                <source src="/assets/videos/neolator-ia-rugal-03.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Video Audio Control -->
+              <button type="button" class="video-sound-btn" id="heroSoundBtn" aria-label="Unmute audio" title="Toggle audio">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <line x1="23" y1="9" x2="17" y2="15"></line>
+                  <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+              </button>
+
+              <!-- Telemetry HUD Overlay -->
+              <div class="screen-hud">
+                <div class="hud-top">
+                  <span class="hud-pill">NEOLATOR ENGINE</span>
+                  <span class="hud-pill hud-fps">60.0 FPS</span>
+                </div>
+                <div class="hud-bottom">
+                  <span class="hud-pill">TOUCH INPUT ACTIVE</span>
+                  <span class="hud-pill">AUDIO: DUAL STEREO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 03: ARCADE INTRO
+         ========================================================================= -->
+    <section class="section intro-section" id="intro">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">BUILT FOR ARCADE LOVERS</div>
+          <h2 class="section-title">THE ARCADE EXPERIENCE, REBUILT FOR YOUR PHONE.</h2>
+          <p class="section-desc">
+            Neolator bridges the golden era of arcade gaming with modern Android engineering. 
+            Enjoy authentic arcade emulation optimized for modern processors, low-latency input processing, and ergonomic touch interaction.
+          </p>
+        </div>
+
+        <!-- Large Gameplay Showcase Video Container -->
+        <div class="intro-showcase reveal">
+          <div class="intro-overlay-badge">
+            <span class="eyebrow-indicator"></span>
+            <span>HIGH-OCTANE ARCADE COMBAT // REAL GAMEPLAY</span>
+          </div>
+          <div class="intro-video-wrapper">
+            <video autoplay loop muted playsinline poster="/assets/screenshots/poster-03.jpg">
+              <source src="/assets/videos/neolator-sep-03-05.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 04: CORE FEATURES
+         ========================================================================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">ENGINEERED FOR PRECISION</div>
+          <h2 class="section-title">MORE THAN AN EMULATOR.</h2>
+          <p class="section-desc">
+            Every layer of Neolator is tuned to deliver the authentic punch and response of classic coin-op machines on Android touchscreens.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 01 -->
+          <article class="feature-card reveal">
+            <div class="feature-num">
+              <span>FEATURE 01</span>
+              <span class="mono">// INPUT</span>
+            </div>
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 12h4m-2-2v4M15 11h.01M18 13h.01M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Intuitive Controls</h3>
+            <p class="feature-desc">
+              Responsive on-screen controls designed for comfortable arcade gameplay with zero unnecessary lag or input ghosting.
+            </p>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="feature-card reveal">
+            <div class="feature-num">
+              <span>FEATURE 02</span>
+              <span class="mono">// MODULAR</span>
+            </div>
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <h3 class="feature-title">Fully Customizable</h3>
+            <p class="feature-desc">
+              Move, resize and configure controls to match your preferred play style, finger reach, and grip preference.
+            </p>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="feature-card reveal">
+            <div class="feature-num">
+              <span>FEATURE 03</span>
+              <span class="mono">// NATIVE</span>
+            </div>
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Built for Android</h3>
+            <p class="feature-desc">
+              Designed around the Android gaming experience with native performance, battery efficiency, and hardware scaling.
+            </p>
+          </article>
+
+          <!-- Card 04 -->
+          <article class="feature-card reveal">
+            <div class="feature-num">
+              <span>FEATURE 04</span>
+              <span class="mono">// LIBRARY</span>
+            </div>
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Classic + Homebrew</h3>
+            <p class="feature-desc">
+              Play supported classic arcade titles and discover homebrew experiences built by independent game creators.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 05: CONTROLLER CUSTOMIZATION (Interactive Live Layout Sandbox)
+         ========================================================================= -->
+    <section class="section controls-section" id="controls">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">TAILORED TO YOUR HANDS</div>
+          <h2 class="section-title">YOUR CONTROLS.<br><span class="gradient-text">YOUR LAYOUT.</span></h2>
+          <p class="section-desc">
+            Make the controls feel exactly the way you want them. Every button, D-Pad axis, and spacing can be repositioned and resized to match your exact grip.
+          </p>
+        </div>
+
+        <!-- Interactive Layout Sandbox -->
+        <div class="controls-sandbox reveal">
+          <div class="sandbox-header">
+            <div class="sandbox-title-area">
+              <h3>Interactive Layout Preview</h3>
+              <p>Test presets and adjust control ergonomics live in the preview below.</p>
+            </div>
+
+            <!-- Preset Buttons -->
+            <div class="preset-selector" role="tablist" aria-label="Controller Layout Presets">
+              <button type="button" class="preset-btn active" data-preset="classic">Arcade 4-Button (Classic)</button>
+              <button type="button" class="preset-btn" data-preset="fightstick">Fight Stick 6-Button</button>
+              <button type="button" class="preset-btn" data-preset="ergonomic">Ergonomic Split</button>
+              <button type="button" class="preset-btn" data-preset="compact">Compact Minimal</button>
+            </div>
+          </div>
+
+          <!-- Sandbox Display Viewport -->
+          <div class="sandbox-stage">
+            <div class="sandbox-grid-bg" aria-hidden="true"></div>
+            
+            <div class="sandbox-game-bg">
+              <img src="/assets/screenshots/poster-01.jpg" alt="Background gameplay silhouette">
+            </div>
+
+            <!-- Dynamic On-Screen Controls -->
+            <div class="virtual-controls-layer">
+              <!-- D-Pad Joystick -->
+              <div class="virtual-dpad" id="sandboxDpad" style="bottom: 28px; left: 36px;">
+                <div class="dpad-cross">
+                  <div class="dpad-stick"></div>
+                </div>
+              </div>
+
+              <!-- Action Buttons Cluster -->
+              <div class="virtual-buttons-cluster" id="sandboxButtons" style="bottom: 28px; right: 36px;">
+                <div class="arcade-btn btn-arcade-a" data-key="A">A</div>
+                <div class="arcade-btn btn-arcade-b" data-key="B">B</div>
+                <div class="arcade-btn btn-arcade-c" data-key="C">C</div>
+                <div class="arcade-btn btn-arcade-d" data-key="D">D</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sliders -->
+          <div class="sandbox-controls-footer">
+            <div class="slider-group">
+              <label for="controlSizeSlider">BUTTON SCALE:</label>
+              <input type="range" id="controlSizeSlider" min="70" max="130" value="100" aria-label="Control Size">
+            </div>
+            <div class="slider-group">
+              <label for="controlOpacitySlider">OPACITY:</label>
+              <input type="range" id="controlOpacitySlider" min="30" max="100" value="95" aria-label="Control Opacity">
+            </div>
+            <div class="mono" style="font-size: 0.75rem; color: var(--accent-cyan);">
+              // TAP BUTTONS TO TEST HAPTICS
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 06: GAME COMPATIBILITY / LIBRARY
+         ========================================================================= -->
+    <section class="section" id="compatibility">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">VERSATILE ARCADE ECOSYSTEM</div>
+          <h2 class="section-title">BRING YOUR FAVORITE ARCADE GAMES.</h2>
+          <p class="section-desc">
+            Neolator is engineered around the rich spectrum of arcade gaming — from rapid-fire run-and-guns to competitive fighting titles and community homebrews.
+          </p>
+        </div>
+
+        <!-- Categories -->
+        <div class="compat-categories">
+          <div class="category-pill-card reveal">
+            <div class="category-icon">🕹️</div>
+            <div class="category-name">Arcade Classics</div>
+            <div class="category-sub">Golden age coin-op titles</div>
+          </div>
+
+          <div class="category-pill-card reveal">
+            <div class="category-icon">🥊</div>
+            <div class="category-name">Fighting Games</div>
+            <div class="category-sub">High-precision fighting systems</div>
+          </div>
+
+          <div class="category-pill-card reveal">
+            <div class="category-icon">💥</div>
+            <div class="category-name">Action &amp; Shooters</div>
+            <div class="category-sub">Intense side-scrollers &amp; shmups</div>
+          </div>
+
+          <div class="category-pill-card reveal">
+            <div class="category-icon">🥋</div>
+            <div class="category-name">Beat 'em ups</div>
+            <div class="category-sub">Co-op brawlers &amp; street battles</div>
+          </div>
+
+          <div class="category-pill-card reveal">
+            <div class="category-icon">⚡</div>
+            <div class="category-name">Homebrew</div>
+            <div class="category-sub">Modern community creations</div>
+          </div>
+        </div>
+
+        <!-- Verified Examples Banner -->
+        <div class="compat-examples-banner reveal">
+          <div>
+            <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Targeted Architecture Examples</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Tested and verified against legendary arcade series:</p>
+          </div>
+          <div class="examples-badge-list">
+            <span class="game-badge">Metal Slug</span>
+            <span class="game-badge">KOF Series</span>
+            <span class="game-badge">Homebrew Arcade ROMs</span>
+          </div>
+        </div>
+
+        <!-- Prominent Mandatory Legal Disclaimer -->
+        <div class="legal-disclaimer-card reveal">
+          <svg class="legal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div class="legal-text">
+            <strong>LEGAL NOTICE:</strong> Neolator does not include copyrighted ROMs. Users are responsible for obtaining and using game files they legally own or have permission to use. Neolator has no official affiliation with SNK, Metal Slug, The King of Fighters, or Neo Geo.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 07: GAMEPLAY SHOWCASE
+         ========================================================================= -->
+    <section class="section" id="showcase">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">FLUID PERFORMANCE</div>
+          <h2 class="section-title">SEE IT. FEEL IT. PLAY IT.</h2>
+          <p class="section-desc">
+            Experience arcade titles at full speed with vivid CRT phosphors and instant input response.
+          </p>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Primary Showcase -->
+          <div class="showcase-primary reveal">
+            <div class="showcase-video-box">
+              <span class="showcase-badge">PRIMARY MATCH // 60 FPS</span>
+              <video id="showcaseVideo1" autoplay loop muted playsinline poster="/assets/screenshots/poster-02.jpg">
+                <source src="/assets/videos/neolator-ia-rugal-03.webm" type="video/webm">
+              </video>
+              <button type="button" class="video-sound-btn" data-sound-toggle="showcaseVideo1" aria-label="Toggle sound">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <line x1="23" y1="9" x2="17" y2="15"></line>
+                  <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="showcase-footer">
+              <div class="showcase-info">
+                <h4>Championship Fight Match</h4>
+                <p>Authentic hit detection, dynamic sprite rendering, and zero frame tearing.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Column -->
+          <div class="showcase-secondary-col">
+            <!-- Secondary 1 -->
+            <div class="showcase-card reveal">
+              <div class="showcase-video-box" style="height: 240px;">
+                <span class="showcase-badge">FIGHTER ENTRY // INTRO</span>
+                <video id="showcaseVideo2" autoplay loop muted playsinline poster="/assets/screenshots/poster-01.jpg">
+                  <source src="/assets/videos/neolator-ia-02.webm" type="video/webm">
+                </video>
+                <button type="button" class="video-sound-btn" data-sound-toggle="showcaseVideo2" aria-label="Toggle sound">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="showcase-footer">
+                <div class="showcase-info">
+                  <h4>Pixel-Perfect Scaling</h4>
+                  <p>Sharp high-resolution display rendering on modern OLEDs.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary 2 -->
+            <div class="showcase-card reveal">
+              <div class="showcase-video-box" style="height: 240px;">
+                <span class="showcase-badge">INTENSE BATTLE // COMBAT</span>
+                <video id="showcaseVideo3" autoplay loop muted playsinline poster="/assets/screenshots/poster-03.jpg">
+                  <source src="/assets/videos/neolator-sep-03-05.webm" type="video/webm">
+                </video>
+                <button type="button" class="video-sound-btn" data-sound-toggle="showcaseVideo3" aria-label="Toggle sound">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="showcase-footer">
+                <div class="showcase-info">
+                  <h4>Instantaneous Input Sampling</h4>
+                  <p>Special moves and combos fire with frame-accurate timing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 08: EXPERIENCE / IMMERSION
+         ========================================================================= -->
+    <section class="immersion-section" id="experience">
+      <div class="container">
+        <div class="immersion-content reveal">
+          <div class="eyebrow">PURE RETRO SOUL</div>
+          <h2 class="immersion-title font-heading">CLASSIC GAMES.<br><span class="gradient-text">MODERN EXPERIENCE.</span></h2>
+          <p class="immersion-desc">
+            The sensory atmosphere of 90s arcade cabinets reimagined for your handheld screen. 
+            Enjoy CRT scanlines, fine phosphors, bloom, and stereo arcade acoustics without bulk or maintenance.
+          </p>
+
+          <div class="immersion-hud-metrics">
+            <div class="immersion-metric-box">
+              <span class="metric-val">60 FPS</span>
+              <span class="metric-label">Stable Refresh</span>
+            </div>
+            <div class="immersion-metric-box">
+              <span class="metric-val">&lt; 1 FRAME</span>
+              <span class="metric-label">Input Latency</span>
+            </div>
+            <div class="immersion-metric-box">
+              <span class="metric-val">100%</span>
+              <span class="metric-label">Layout Freedom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 09: WHY NEOLATOR
+         ========================================================================= -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">PLAYER FIRST</div>
+          <h2 class="section-title">MADE FOR PLAYERS,<br>NOT JUST EMULATION.</h2>
+          <p class="section-desc">
+            Neolator removes the friction of complicated setups so you can get straight into the game.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="why-content">
+              <h4>Intuitive Controls</h4>
+              <p>Haptic-ready tactile virtual buttons built specifically for rapid arcade combos and directional inputs.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+            </div>
+            <div class="why-content">
+              <h4>Custom Layouts</h4>
+              <p>Drag, reposition, and scale any button to match your hand size or specific game genre requirements.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+                <path d="M12 18h.01"></path>
+              </svg>
+            </div>
+            <div class="why-content">
+              <h4>Android-First Experience</h4>
+              <p>Optimized for modern Android architectures with low battery drain and hardware GPU acceleration.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <div class="why-content">
+              <h4>Arcade-Focused Interface</h4>
+              <p>A streamlined interface designed to get you playing in seconds without endless confusing submenus.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="why-content">
+              <h4>Homebrew Support</h4>
+              <p>Run community-created indie arcade projects and new retro-inspired titles directly on your phone.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="why-content">
+              <h4>Simple Game Access</h4>
+              <p>Effortlessly organize and launch your legally owned game library with direct directory selection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 10: HOW IT WORKS
+         ========================================================================= -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">QUICK START</div>
+          <h2 class="section-title">HOW IT WORKS.</h2>
+          <p class="section-desc">
+            Get up and running in four simple steps. No complicated command line, BIOS extraction, or root needed.
+          </p>
+        </div>
+
+        <div class="steps-wrapper">
+          <!-- Step 1 -->
+          <div class="step-card reveal">
+            <div class="step-number-badge">01</div>
+            <h3 class="step-title">INSTALL</h3>
+            <p class="step-desc">Get Neolator from Google Play and launch the app on your Android smartphone or tablet.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card reveal">
+            <div class="step-number-badge">02</div>
+            <h3 class="step-title">ADD YOUR GAME</h3>
+            <p class="step-desc">Load your legally obtained supported game files directly from your device storage.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card reveal">
+            <div class="step-number-badge">03</div>
+            <h3 class="step-title">CUSTOMIZE</h3>
+            <p class="step-desc">Configure your on-screen controller layout, adjust button sizing, and tune display filters.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card reveal">
+            <div class="step-number-badge">04</div>
+            <h3 class="step-title">PLAY</h3>
+            <p class="step-desc">Jump straight into the authentic coin-op arcade experience anywhere you go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 11: APP SCREENSHOT GALLERY / CAROUSEL
+         ========================================================================= -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">APP WALKTHROUGH</div>
+          <h2 class="section-title">INSIDE NEOLATOR</h2>
+          <p class="section-desc">
+            A clean, distraction-free interface built for fast game loading, layout precision, and maximum gameplay immersion.
+          </p>
+        </div>
+
+        <!-- Carousel -->
+        <div class="gallery-container reveal">
+          <div class="gallery-track" id="galleryTrack">
+            <!-- Screen 1 -->
+            <div class="gallery-slide">
+              <div class="screen-card-mockup">
+                <div class="screen-header-bar">
+                  <span>SCREEN 01</span>
+                  <span>HOME</span>
+                </div>
+                <div class="screen-body-placeholder">
+                  <div class="placeholder-badge">[ APP SCREENSHOT: HOME ]</div>
+                  <h4 class="placeholder-title">Home Dashboard</h4>
+                  <p class="placeholder-meta">Recent titles, quick launch, and seamless session resume.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 2 -->
+            <div class="gallery-slide">
+              <div class="screen-card-mockup">
+                <div class="screen-header-bar">
+                  <span>SCREEN 02</span>
+                  <span>LIBRARY</span>
+                </div>
+                <div class="screen-body-placeholder">
+                  <div class="placeholder-badge">[ APP SCREENSHOT: LIBRARY ]</div>
+                  <h4 class="placeholder-title">Game Library</h4>
+                  <p class="placeholder-meta">Clean title browser with metadata and folder management.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 3 -->
+            <div class="gallery-slide">
+              <div class="screen-card-mockup">
+                <div class="screen-header-bar">
+                  <span>SCREEN 03</span>
+                  <span>GAMEPLAY</span>
+                </div>
+                <div class="screen-body-placeholder">
+                  <div class="placeholder-badge">[ APP SCREENSHOT: GAMEPLAY ]</div>
+                  <h4 class="placeholder-title">Arcade Action</h4>
+                  <p class="placeholder-meta">Full-screen immersion with responsive touch overlay.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 4 -->
+            <div class="gallery-slide">
+              <div class="screen-card-mockup">
+                <div class="screen-header-bar">
+                  <span>SCREEN 04</span>
+                  <span>CONTROLS</span>
+                </div>
+                <div class="screen-body-placeholder">
+                  <div class="placeholder-badge">[ APP SCREENSHOT: CUSTOMIZER ]</div>
+                  <h4 class="placeholder-title">Layout Editor</h4>
+                  <p class="placeholder-meta">Drag and drop button remapping and scale slider controls.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 5 -->
+            <div class="gallery-slide">
+              <div class="screen-card-mockup">
+                <div class="screen-header-bar">
+                  <span>SCREEN 05</span>
+                  <span>SETTINGS</span>
+                </div>
+                <div class="screen-body-placeholder">
+                  <div class="placeholder-badge">[ APP SCREENSHOT: SETTINGS ]</div>
+                  <h4 class="placeholder-title">Audio &amp; Display</h4>
+                  <p class="placeholder-meta">Aspect ratio scaling, CRT scanline toggles, and audio tuning.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="gallery-nav-controls">
+            <button type="button" class="gallery-arrow-btn" id="galleryPrev" aria-label="Previous screenshot">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <div class="gallery-dots" id="galleryDots"></div>
+            <button type="button" class="gallery-arrow-btn" id="galleryNext" aria-label="Next screenshot">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 12: GOOGLE PLAY CTA
+         ========================================================================= -->
+    <section class="section cta-section" id="download">
+      <div class="container">
+        <div class="cta-banner-card reveal">
+          <div class="eyebrow" style="margin-inline: auto;">AVAILABLE NOW ON GOOGLE PLAY</div>
+          <h2 class="cta-headline">READY TO RETURN TO THE ARCADE?</h2>
+          <p class="cta-subcopy">Take the arcade experience with you.</p>
+
+          <div class="google-play-badge-wrapper">
+            <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="badge-playstore-btn">
+              <svg class="badge-play-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186a1.492 1.492 0 0 1-.22-.767V2.581c0-.284.08-.546.22-.767zm11.242 11.243l2.096-2.097-9.33-5.387 7.234 7.484zm0 1.886l-7.234 7.484 9.33-5.387-2.096-2.097zm1.488-1.488l3.193 1.843c1.076.621 1.076 1.636 0 2.257l-3.193 1.843-1.636-1.636 1.636-2.307z"/>
+              </svg>
+              <div class="badge-play-text">
+                <div class="sub">GET IT ON</div>
+                <div class="main">Google Play</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 13: FAQ
+         ========================================================================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">COMMON INQUIRIES</div>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-desc">
+            Everything you need to know about Neolator, compatibility, and device support.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+          <!-- Q1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What is Neolator?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Neolator is an Android arcade emulator engineered specifically for classic arcade and homebrew gaming. It delivers low-latency emulation, fully customizable on-screen touch controls, and an intuitive game loading interface for Android devices.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Does Neolator include ROMs?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. Neolator does not distribute, provide, or include copyrighted ROMs or game data. Users are strictly responsible for sourcing and using game files that they legally own or have explicit permission to use.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I play Metal Slug?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Metal Slug titles are supported arcade classics that run on Neolator's emulation core when you load your legally obtained game files into the app.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I play KOF games?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. The King of Fighters (KOF) arcade series is supported. Neolator provides dedicated layout customization options for 4-button and 6-button fighting game configurations.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Does Neolator support homebrew games?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Neolator actively supports homebrew arcade games, indie productions, and community creations compatible with supported arcade formats.</p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I customize the controls?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Neolator features an on-screen controller layout editor where you can freely reposition, scale, adjust opacity, and map buttons to suit your hand size and preferred grip style.</p>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Which Android devices are supported?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Neolator is designed for modern Android smartphones and tablets running Android 8.0 and above, with optimal performance on devices supporting modern GPU acceleration.</p>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Does Neolator support physical controllers?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Neolator is built primarily around an intuitive, customizable on-screen touch experience, with ongoing enhancements for external gamepads and Bluetooth input peripherals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       SECTION 14: FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <img src="/assets/brand/icon-192.png" alt="Neolator Logo" style="width: 32px; height: 32px; border-radius: 8px;">
+            <span style="font-family: var(--font-sans); font-weight: 800; font-size: 1.2rem; letter-spacing: 0.05em;">NEOLATOR</span>
+          </div>
+          <p>YOUR ARCADE. YOUR WAY.</p>
+          
+          <!-- Easter Egg Button -->
+          <button type="button" class="coin-easter-egg-btn" id="coinEasterEggBtn" title="Insert 1 Credit">
+            <span>🪙</span>
+            <span>INSERT COIN</span>
+          </button>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#controls">Controls</a></li>
+            <li><a href="#compatibility">Compatibility</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="#showcase">Experience</a></li>
+            <li><a href="#gallery">Screenshots</a></li>
+            <li><a href="#download">Google Play</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal &amp; Support</h5>
+          <ul>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="#legal-notice">Terms of Service</a></li>
+            <li><a href="mailto:support@neolator.app">Support</a></li>
+            <li><a href="mailto:contact@neolator.app">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Neolator. All rights reserved. Built for Android arcade enthusiasts.
+        </div>
+        <div class="mono" style="font-size: 0.75rem; color: var(--text-dim);">
+          LEGAL: NEOLATOR IS AN EMULATOR AND DOES NOT DISTRIBUTE COPYRIGHTED ROMS.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Logic Module -->
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

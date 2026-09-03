@@ -1,0 +1,16 @@
+{
+  "name": "Neolator — Your Arcade. Your Way.",
+  "short_name": "Neolator",
+  "description": "A modern arcade experience built for Android.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06080d",
+  "theme_color": "#06080d",
+  "icons": [
+    { "src": "/assets/brand/favicon.ico", "type": "image/x-icon", "sizes": "16x16 32x32" },
+    { "src": "/assets/brand/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/assets/brand/icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/assets/brand/icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" },
+    { "src": "/assets/brand/icon-512-maskable.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}
